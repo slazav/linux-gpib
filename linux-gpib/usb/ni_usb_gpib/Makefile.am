@@ -19,7 +19,7 @@ do_subst = sed -e 's,[@]sbindir[@],$(sbindir),g'  -e 's,[@]hotplug_usb_conf_dir[
 	$(do_subst) < 99-ni_usb_gpib.rules.in >99-ni_usb_gpib.rules
 
 install-data-local: 99-ni_usb_gpib.rules
-	test -e $(HOTPLUG_USB_CONF_DIR)/ni_usb_gpib || $(INSTALL_SCRIPT) -D ni_usb_gpib $(HOTPLUG_USB_CONF_DIR)/ni_usb_gpib
-	test -e $(HOTPLUG_USB_CONF_DIR)/ni_usb_gpib.usermap || $(INSTALL_DATA) -D ni_usb_gpib.usermap $(HOTPLUG_USB_CONF_DIR)/ni_usb_gpib.usermap
-	$(INSTALL) -d $(USB_FIRMWARE_DIR)/ni_usb_gpib
-	test -d $(UDEV_RULES_DIR) && test -e $(UDEV_RULES_DIR)/99-ni_usb_gpib.rules || $(INSTALL_DATA) -D 99-ni_usb_gpib.rules $(UDEV_RULES_DIR)/99-ni_usb_gpib.rules
+	test -e $(DESTDIR)$(HOTPLUG_USB_CONF_DIR)/ni_usb_gpib || $(INSTALL_SCRIPT) -D ni_usb_gpib $(DESTDIR)$(HOTPLUG_USB_CONF_DIR)/ni_usb_gpib
+	test -e $(DESTDIR)$(HOTPLUG_USB_CONF_DIR)/ni_usb_gpib.usermap || $(INSTALL_DATA) -D ni_usb_gpib.usermap $(DESTDIR)$(HOTPLUG_USB_CONF_DIR)/ni_usb_gpib.usermap
+	$(INSTALL) -d $(DESTDIR)$(USB_FIRMWARE_DIR)/ni_usb_gpib
+	test -d $(DESTDIR)$(UDEV_RULES_DIR) && test -e $(DESTDIR)$(UDEV_RULES_DIR)/99-ni_usb_gpib.rules || $(INSTALL_DATA) -D 99-ni_usb_gpib.rules $(DESTDIR)$(UDEV_RULES_DIR)/99-ni_usb_gpib.rules

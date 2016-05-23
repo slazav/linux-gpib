@@ -19,7 +19,7 @@ do_subst = sed -e 's,[@]sbindir[@],$(sbindir),g'  -e 's,[@]hotplug_usb_conf_dir[
 	$(do_subst) < 99-agilent_82357a.rules.in >99-agilent_82357a.rules
 
 install-data-local: 99-agilent_82357a.rules
-	test -e $(HOTPLUG_USB_CONF_DIR)/agilent_82357a || $(INSTALL_SCRIPT) -D agilent_82357a $(HOTPLUG_USB_CONF_DIR)/agilent_82357a
-	test -e $(HOTPLUG_USB_CONF_DIR)/agilent_82357a.usermap || $(INSTALL_DATA) -D agilent_82357a.usermap $(HOTPLUG_USB_CONF_DIR)/agilent_82357a.usermap
-	$(INSTALL) -d $(USB_FIRMWARE_DIR)/agilent_82357a
-	test -d $(UDEV_RULES_DIR) && test -e $(UDEV_RULES_DIR)/99-agilent_82357a.rules || $(INSTALL_DATA) -D 99-agilent_82357a.rules $(UDEV_RULES_DIR)/99-agilent_82357a.rules
+	test -e $(DESTDIR)$(HOTPLUG_USB_CONF_DIR)/agilent_82357a || $(INSTALL_SCRIPT) -D agilent_82357a $(DESTDIR)$(HOTPLUG_USB_CONF_DIR)/agilent_82357a
+	test -e $(DESTDIR)$(HOTPLUG_USB_CONF_DIR)/agilent_82357a.usermap || $(INSTALL_DATA) -D agilent_82357a.usermap $(DESTDIR)$(HOTPLUG_USB_CONF_DIR)/agilent_82357a.usermap
+	$(INSTALL) -d $(DESTDIR)$(USB_FIRMWARE_DIR)/agilent_82357a
+	test -d $(DESTDIR)$(UDEV_RULES_DIR) && test -e $(DESTDIR)$(UDEV_RULES_DIR)/99-agilent_82357a.rules || $(INSTALL_DATA) -D 99-agilent_82357a.rules $(DESTDIR)$(UDEV_RULES_DIR)/99-agilent_82357a.rules

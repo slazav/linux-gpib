@@ -10,6 +10,8 @@ License:      GPL
 Packager:     Vladislav Zavjalov <slazav@altlinux.org>
 Source:       %name-%version.tar
 
+BuildPreReq:  kernel-headers-modules-un-def
+
 %description
 The Linux GPIB Package is a support package for GPIB (IEEE 488) hardware.
 The package contains kernel driver modules, and a C user-space library
@@ -20,9 +22,19 @@ is intended to be compatible with National Instrument's GPIB library.
 %setup -q
 
 %build
-%configure
+%autoreconf
+%configure --with-linux-srcdir=/usr/src/linux-4.5.4-un-def
 %make install DESTDIR=%buildroot
 
 %files
+/etc/hotplug/usb/*
+/etc/udev/rules.d/*
+/etc/gpib.conf
+/lib/modules/4.5.4-un-def-alt1/gpib/*
+/usr/bin/*
+/usr/include/gpib/*
+/usr/lib64/*
+/usr/sbin/*
+/usr/share/usb/*
 
 %changelog

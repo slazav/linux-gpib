@@ -1,0 +1,13 @@
+kernel//home/dave/gpib/linux-gpib-code/linux-gpib/drivers/gpib/agilent_82350b/agilent_82350b.ko
+kernel//home/dave/gpib/linux-gpib-code/linux-gpib/drivers/gpib/agilent_82357a/agilent_82357a.ko
+kernel//home/dave/gpib/linux-gpib-code/linux-gpib/drivers/gpib/cb7210/cb7210.ko
+kernel//home/dave/gpib/linux-gpib-code/linux-gpib/drivers/gpib/cec/cec_gpib.ko
+kernel//home/dave/gpib/linux-gpib-code/linux-gpib/drivers/gpib/hp_82335/hp82335.ko
+kernel//home/dave/gpib/linux-gpib-code/linux-gpib/drivers/gpib/hp_82341/hp_82341.ko
+kernel//home/dave/gpib/linux-gpib-code/linux-gpib/drivers/gpib/ines/ines_gpib.ko
+kernel//home/dave/gpib/linux-gpib-code/linux-gpib/drivers/gpib/lpvo_usb_gpib/lpvo_usb_gpib.ko
+kernel//home/dave/gpib/linux-gpib-code/linux-gpib/drivers/gpib/nec7210/nec7210.ko
+kernel//home/dave/gpib/linux-gpib-code/linux-gpib/drivers/gpib/ni_usb/ni_usb_gpib.ko
+kernel//home/dave/gpib/linux-gpib-code/linux-gpib/drivers/gpib/sys/gpib_common.ko
+kernel//home/dave/gpib/linux-gpib-code/linux-gpib/drivers/gpib/tms9914/tms9914.ko
+kernel//home/dave/gpib/linux-gpib-code/linux-gpib/drivers/gpib/tnt4882/tnt4882.ko

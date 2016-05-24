@@ -8,10 +8,16 @@ URL:          http://linux-gpib.sourceforge.net/
 License:      GPL
 
 Packager:     Vladislav Zavjalov <slazav@altlinux.org>
-Source:       %name-%version.tar
+# I am building this package with gear+rpmbuild locally.
+# It works for me with agilent 82357b device and un-def kernel
+# (some non-free firmware from http://linux-gpib.sourceforge.net/ also needed).
+# To pack it for Altlinux some additional work needed (because of kernel modules).
+# If you will do this work, please let me know.
 
+Source:       %name-%version.tar
 BuildPreReq:  kernel-headers-modules-un-def
 Requires:     fxload
+
 
 %description
 The Linux GPIB Package is a support package for GPIB (IEEE 488) hardware.

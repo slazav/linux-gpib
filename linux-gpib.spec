@@ -19,6 +19,7 @@ The package contains kernel driver modules, and a C user-space library
 with Guile, Perl, PHP, Python and TCL bindings. The API of the C library
 is intended to be compatible with National Instrument's GPIB library.
 
+
 %prep
 %setup -q
 
@@ -26,6 +27,9 @@ is intended to be compatible with National Instrument's GPIB library.
 %autoreconf
 %configure --with-linux-srcdir=/usr/src/linux-4.5.4-un-def
 %make install DESTDIR=%buildroot
+
+%pre
+%_sbindir/groupadd -r -f gpib 2> /dev/null ||:
 
 %files
 /etc/hotplug/usb/*

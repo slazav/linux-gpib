@@ -11,6 +11,7 @@ Packager:     Vladislav Zavjalov <slazav@altlinux.org>
 Source:       %name-%version.tar
 
 BuildPreReq:  kernel-headers-modules-un-def
+Requires:     fxload
 
 %description
 The Linux GPIB Package is a support package for GPIB (IEEE 488) hardware.

@@ -59,6 +59,7 @@ case $PRODUCT in
 957/518/*)
 	FIRMWARE=$DATADIR/usb/agilent_82357a/measat_releaseX1.8.hex
 	FXLOAD_OPTIONS="-t fx2"
+	DOITTWICE=1
 	;;
 
 esac
@@ -92,4 +93,5 @@ if [ -x /usr/bin/logger ]; then
 fi
 
 $FXLOAD $FXLOAD_OPTIONS -I $FIRMWARE
+if [ "$DOITTWICE" ]; then $FXLOAD $FXLOAD_OPTIONS -I $FIRMWARE; fi
 

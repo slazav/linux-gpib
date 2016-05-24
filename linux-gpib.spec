@@ -40,7 +40,7 @@ is intended to be compatible with National Instrument's GPIB library.
 %files
 /etc/hotplug/usb/*
 /etc/udev/rules.d/*
-/etc/gpib.conf
+%config(noreplace) %_sysconfdir/gpib.conf
 /lib/modules/4.5.4-un-def-alt1/gpib/*
 /usr/bin/*
 /usr/include/gpib/*

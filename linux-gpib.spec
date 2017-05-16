@@ -31,7 +31,7 @@ is intended to be compatible with National Instrument's GPIB library.
 
 %build
 %autoreconf
-%configure --with-linux-srcdir=/usr/src/linux-4.8.12-un-def
+%configure --with-linux-srcdir=/usr/src/linux-4.8.14-un-def
 %make install DESTDIR=%buildroot
 
 %pre
@@ -41,7 +41,7 @@ is intended to be compatible with National Instrument's GPIB library.
 /etc/hotplug/usb/*
 /etc/udev/rules.d/*
 %config(noreplace) %_sysconfdir/gpib.conf
-/lib/modules/4.8.12-un-def-alt1/gpib/*
+/lib/modules/4.8.14-un-def-alt1/gpib/*
 /usr/bin/*
 /usr/include/gpib/*
 /usr/lib64/*
